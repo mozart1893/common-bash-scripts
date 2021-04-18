@@ -36,3 +36,9 @@ jobs:
           echo test, and deploy your project.
           node -v
           npm -v
+      #This is to run a command from another (non-default) Shell
+      - name: Python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
