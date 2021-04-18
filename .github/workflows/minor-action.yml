@@ -46,6 +46,8 @@ jobs:
   #Run Script on Windows
   run-windows-command:
     runs-on: windows-latest
+    #This is to ensure that this job only runs when the "build" jod is concluded
+    needs: [build]
     steps:
       - name: PWD with Powershell
         run: Get-Location
