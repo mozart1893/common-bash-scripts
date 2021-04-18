@@ -42,3 +42,13 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+
+  #Run Script on Windows
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: PWD with Powershell
+        run: Get-Location
+      - name: PWD in Bash
+        run: pwd
+        shell: bash
